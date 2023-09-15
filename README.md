@@ -115,5 +115,11 @@ Creating a carpooling platform involves integrating various components and funct
 
 By aligning the USPs with the potential solutions, Carpolify can effectively communicate its unique value proposition to the target audience, attracting more users and establishing a strong position in the carpooling market.
 ## Demo
+A video demonstration of how Smart Route Optimization works.
+
+
+https://github.com/rupajsen/NFC_FUSION/assets/89799310/7c317707-7507-4fdc-a92a-c32568274f3e.mov
+
+
 ## License
 MIT License
