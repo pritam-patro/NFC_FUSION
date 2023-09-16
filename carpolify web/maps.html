@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <div id="details"></div>
+<script>
+    var reqcount=0;
+    navigator.geolocation.watchPosition(successCallback,errorCallback,options);
+    function successCallback(position){
+        const{accuracy, latitude, longitude, altitude, heading, speed} = position.coords;
+
+        reqcount++;
+        details.innerHtml="Accuracy: "+accuracy+"<br>";
+        details.innerHtml="Latitude:: "+latitude+"| Longitude: "+ longitude+"<br>";
+        details.innerHtml="Altitude: "+altitude+"<br>";
+        details.innerHtml="Heading: "+heading+"<br>";
+        details.innerHtml="Speed: "+speed+"<br>";
+        details.innerHtml="reqcount: "+reqcount;
+    }
+    function errorCallback(error){
+
+    }
+</script>
+</body>
+</html>
+
+

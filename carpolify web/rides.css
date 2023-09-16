@@ -1,0 +1,65 @@
+/* Style for Section */
+.sec-1 {
+    margin-top: 0px;
+    background-color:;
+    padding: 50px 0;
+    border: black;
+    text-align: center;
+}
+
+/* Style for Container */
+.sec-1 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style for Ride button */
+.btn-r {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 22px;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+/* Style for Address Box */
+.address-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for Address Input */
+.address-input {
+    width: 70%;
+    padding: 20px;
+    margin: 10px 0;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Style for Way Connection */
+.way-connection {
+    padding: 0 20px;
+}
+
+/* Clearfix to clear floated elements */
+.sec-1 .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type="text" i] {
+    padding: 15px 95px;
+    
+}
+.bottomnav{
+    text-align: center;
+    font-size: 35px;
+}
