@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rides.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Include Font Awesome -->
+    <style>
+        /* Add CSS for rider details section */
+        body {
+            background-image: url('driving.avif'); /* Replace 'driving.avif' with your image file path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: rgba(207, 216, 239, 0.7); /* Semi-transparent background color */
+            background-attachment: fixed;
+        }
+
+        .rider-details {
+            background-color: rgba(245, 245, 245, 0.9); /* Semi-transparent background color for rider details */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .rider-details h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .rider-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rider-details li {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .rider-details li strong {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+    <title>Ride with Carpool</title>
+</head>
+<body>
+    <section class="sec-1">
+        <div class="container">
+            <div class="address-box">
+                <div class="address-input">
+                    <i class="fas fa-map-marker"></i>
+                    <input type="text" id="startLocation" href="https://www.google.com/maps/@19.0699698,72.8397314,15z?entry=ttu" placeholder="Enter starting location">
+                </div>
+                <div class="way-connection">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="address-input">
+                    <i class="fas fa-map-pin"></i>
+                    <input type="text" id="endLocation" placeholder="Enter ending location">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="container">
+            <button class="btn-r" id="startRideBtn">Ride With Carpool</button>
+        </div>
+    </section>
+    
+    <!-- Add rider details section -->
+    <section class="rider-details" style="display: none;">
+        <div class="container">
+            <h2>Rider Details</h2>
+            <ul>
+                <li><strong>Name:</strong> <span id="riderName"></span></li>
+                <li><strong>Email:</strong> <span id="riderEmail"></span></li>
+                <li><strong>Mobile No:</strong> <span id="riderMobile"></span></li>
+                <li><strong>Feedback History:</strong> <span id="riderFeedback"></span></li>
+                <li><strong>License:</strong> <span id="riderLicense"></span></li>
+                <li><strong>Rating:</strong> <span id="riderRating"></span></li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('startRideBtn').addEventListener('click', function () {
+                // Get the entered starting and ending locations
+                var startLocation = document.getElementById('startLocation').value;
+                var endLocation = document.getElementById('endLocation').value;
+
+                // Perform any validation or processing as needed
+                if (startLocation && endLocation) {
+                    // Simulate rider details (you can replace this with real data)
+                    var riders = [
+                        {
+                            name: "John Doe",
+                            email: "john@example.com",
+                            mobile: "123-456-7890",
+                            feedback: "Excellent rider",
+                            license: "ABC123",
+                            rating: "4.8"
+                        },
+                        {
+                            name: "Alice Johnson",
+                            email: "alice@example.com",
+                            mobile: "987-654-3210",
+                            feedback: "Very friendly rider",
+                            license: "XYZ456",
+                            rating: "4.9"
+                        },
+                        {
+        name: "John Doe",
+        email: "john@example.com",
+        mobile: "123-456-7890",
+        feedback: "Excellent driver",
+        license: "ABC123",
+        rating: "4.8"
+    },
+    {
+        name: "Alice Johnson",
+        email: "alice@example.com",
+        mobile: "987-654-3210",
+        feedback: "Very friendly driver",
+        license: "XYZ456",
+        rating: "4.9"
+    },
+    {
+        name: "David Smith",
+        email: "david@example.com",
+        mobile: "555-123-4567",
+        feedback: "Punctual driver",
+        license: "DEF789",
+        rating: "4.7"
+    },
+    {
+        name: "Sarah Brown",
+        email: "sarah@example.com",
+        mobile: "111-222-3333",
+        feedback: "Safe driver",
+        license: "GHI101",
+        rating: "4.6"
+    },
+    {
+        name: "Michael Wilson",
+        email: "michael@example.com",
+        mobile: "555-555-5555",
+        feedback: "Courteous driver",
+        license: "JKL202",
+        rating: "4.9"
+    },
+    {
+        name: "Emily Davis",
+        email: "emily@example.com",
+        mobile: "888-777-6666",
+        feedback: "Helpful driver",
+        license: "MNO303",
+        rating: "4.7"
+    },
+    {
+        name: "James Lee",
+        email: "james@example.com",
+        mobile: "777-888-9999",
+        feedback: "Knowledgeable driver",
+        license: "PQR404",
+        rating: "4.8"
+    },
+    {
+        name: "Olivia Johnson",
+        email: "olivia@example.com",
+        mobile: "222-333-4444",
+        feedback: "Excellent driver",
+        license: "STU505",
+        rating: "4.9"
+    },
+    {
+        name: "William Anderson",
+        email: "william@example.com",
+        mobile: "333-444-5555",
+        feedback: "Friendly driver",
+        license: "VWX606",
+        rating: "4.7"
+    },
+    {
+        name: "Sophia White",
+        email: "sophia@example.com",
+        mobile: "444-555-6666",
+        feedback: "Polite driver",
+        license: "YZA707",
+        rating: "4.8"
+    },
+    {
+        name: "Daniel Martin",
+        email: "daniel@example.com",
+        mobile: "555-666-7777",
+        feedback: "Reliable driver",
+        license: "BCD808",
+        rating: "4.6"
+    },
+    {
+        name: "Ava Johnson",
+        email: "ava@example.com",
+        mobile: "666-777-8888",
+        feedback: "Safe driver",
+        license: "EFG909",
+        rating: "4.7"
+    },
+    {
+        name: "Matthew Davis",
+        email: "matthew@example.com",
+        mobile: "777-888-9999",
+        feedback: "Courteous driver",
+        license: "HIJ010",
+        rating: "4.9"
+    },
+    {
+        name: "Ella Smith",
+        email: "ella@example.com",
+        mobile: "888-999-0000",
+        feedback: "Friendly driver",
+        license: "KLM111",
+        rating: "4.8"
+    },
+    {
+        name: "Joseph Wilson",
+        email: "joseph@example.com",
+        mobile: "999-000-1111",
+        feedback: "Punctual driver",
+        license: "NOP212",
+        rating: "4.7"
+    }
+                        // Add more rider details here...
+                    ];
+
+                    // Get a random rider from the array
+                    var randomRider = riders[Math.floor(Math.random() * riders.length)];
+
+                    // Populate the rider details in the HTML
+                    document.getElementById('riderName').textContent = randomRider.name;
+                    document.getElementById('riderEmail').textContent = randomRider.email;
+                    document.getElementById('riderMobile').textContent = randomRider.mobile;
+                    document.getElementById('riderFeedback').textContent = randomRider.feedback;
+                    document.getElementById('riderLicense').textContent = randomRider.license;
+                    document.getElementById('riderRating').textContent = randomRider.rating;
+
+                    // Show the rider details section
+                    document.querySelector('.rider-details').style.display = 'block';
+                } else {
+                    alert('Please enter both starting and ending locations.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
