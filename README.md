@@ -13,6 +13,7 @@ Develop a web application to revolutionize transportation experience by providin
 • External Service Integration Management
 
 ## Technologies Used
+Flutter, HTML, CSS, Javascript
 
 ## Possible Solutons
 Creating a carpooling platform involves integrating various components and functionalities to facilitate ride-sharing and carpooling. Here are the key features and components you might consider when building a carpooling solution:
